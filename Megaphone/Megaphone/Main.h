@@ -23,7 +23,6 @@ namespace Megaphone {
 	using namespace Newtonsoft::Json;
 
 	bool flag;
-	bool flag2;
 	std::vector<std::thread> threads;
 	std::unordered_map<std::string, int> mapRooms;
 	std::string stateTable[] = {
@@ -80,12 +79,6 @@ namespace Megaphone {
 		}
 	}
 
-	public ref class Config
-	{
-		public: String^ msg;
-		public: array<String^>^ times;
-	};
-
 	/// <summary>
 	/// Summary for Main
 	/// </summary>
@@ -113,6 +106,12 @@ namespace Megaphone {
 		}
 
 	protected:
+		ref class Config
+		{
+			public: String^ msg;
+			public: array<String^>^ times;
+		};
+
 	private: System::Windows::Forms::Label^ label1;
 	private: System::Windows::Forms::Label^ label2;
 	private: System::Windows::Forms::Label^ label3;
